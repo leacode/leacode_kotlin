@@ -1,4 +1,4 @@
-##如何用kotlin开发同时支持ios和android的库
+## 如何用kotlin开发同时支持iOS和Android的库
 
 虽说kotlin-native可以支持链接到c,java,objective-c等语言，甚至可以进行原生开发，但是在使用的过程中并不友好，配置繁琐且api相对生硬。那么，我们能用kotlin做些什么来减少开发成本呢？ 通过kotlin构建库不失为一个好办法，可以将iOS和安卓共有的参数、model和通用方法用kotlin写成库，并分别打包给两个平台使用，在未来应该是一个可行性的方案。
 
