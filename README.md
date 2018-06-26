@@ -1,6 +1,12 @@
-如何用kotlin开发同时支持ios和android的库
+##如何用kotlin开发同时支持ios和android的库
 
-##新建Gradle工程
+虽说kotlin-native可以支持链接到c,java,objective-c等语言，甚至可以进行原生开发，但是在使用的过程中并不友好，配置繁琐且api相对生硬。那么，我们能用kotlin做些什么来减少开发成本呢？ 通过kotlin构建库不失为一个好办法，可以将iOS和安卓共有的参数、model和通用方法用kotlin写成库，并分别打包给两个平台使用，在未来应该是一个可行性的方案。
+
+由于现在kotlin-native还是没有推出正式版，不建议马上通过这种方式来开发项目，这里只是给未来的开发提供了一种可能性。
+
+下面就介绍一下怎么用kotlin来开发一个支持两个平台的库：
+
+## 新建Gradle工程
 
 一、在idea中打开 File -> New -> Project
 
@@ -119,7 +125,12 @@ konanArtifacts {
 }
 
 ```
-然后执行 .gradlew build就会在build/konan/bin/iphone目录下生成一个名为Base.framework的文件
+然后执行 
+
+```
+./gradlew build
+```
+就会在build/konan/bin/iphone目录下生成一个名为Base.framework的文件
 
 可以用于导入ios项目中使用
 
